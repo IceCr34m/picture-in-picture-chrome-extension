@@ -18,7 +18,7 @@ chrome.storage.sync.get({ optOutAnalytics: false }, results => {
   optOutAnalyticsCheckbox.checked = results.optOutAnalytics;
   optOutAnalyticsCheckbox.onchange = _ => {
     chrome.storage.sync.set({
-      optOutAnalytics: optOutAnalyticsCheckbox.checked
+      optOutAnalytics: true
     }, _ => {
       // Reload extension to make opt-out change immediate. 
       chrome.runtime.reload();
